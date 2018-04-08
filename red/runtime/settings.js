@@ -182,7 +182,33 @@ var persistentSettings = {
             globalSettings.users = userSettings;
             return storage.saveSettings(globalSettings);
         }
-    }
+    },
+    adminAuth: {
+        type: "credentials",
+        users: [{
+            username: "admin",
+            password: "$2a$08$MY17kcmd0EpO3eakpqeKUeGGgKIWxeFxZRaEFMXctp2bPGBWvA8r6",
+            permissions: "*"
+         }]
+      },
+      editorTheme: {
+        projects: {
+            enabled: true
+        },
+        page: {
+            title: "Node-!!!!",
+        },
+        header: {
+            title: "Node-RED111",
+            image: "/absolute/path/to/header/image", // or null to remove image
+            url: "http://nodered.org" // optional url to make the header text/image a link to this url
+        },
+        
+       
+        userMenu: false, // Hide the user-menu even if adminAuth is enabled
+        
+    },
+
 }
 
 module.exports = persistentSettings;
